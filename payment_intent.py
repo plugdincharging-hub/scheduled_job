@@ -52,7 +52,6 @@ def fetch_payments(headers: str, time_cut: dict):
 
         return filter_payments(parsed_response)
 
-
 def main():
 
     uk_now = datetime.now(ZoneInfo("Europe/London"))

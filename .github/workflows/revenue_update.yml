@@ -3,27 +3,27 @@ name: Revenue update data
 on:
   schedule:
   # Friday 7pm - 11:45pm
-    - cron: '*/15 19-23 * * 5'
+    - cron: '*/5 19-23 * * 5'
       timezone: 'Europe/London'
 
     # Saturday 12am - 2am
-    - cron: '*/15 0-2 * * 6'
+    - cron: '*/5 0-2 * * 6'
       timezone: 'Europe/London'
 
     # Saturday 7pm - 11:45pm
-    - cron: '*/15 19-23 * * 6'
+    - cron: '*/5 19-23 * * 6'
       timezone: 'Europe/London'
 
     # Saturday 12am - 2am
-    - cron: '*/15 0-2 * * 0'
+    - cron: '*/5 0-2 * * 0'
       timezone: 'Europe/London'
 
     # Sunday 7pm - 11:45pm
-    - cron: '*/15 19-23 * * 0'
+    - cron: '*/5 19-23 * * 0'
       timezone: 'Europe/London'
 
     # Sunday 12am - 2am
-    - cron: '*/15 0-2 * * 1'
+    - cron: '*/5 0-2 * * 1'
       timezone: 'Europe/London'
 
   workflow_dispatch:
