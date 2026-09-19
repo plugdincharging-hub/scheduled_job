@@ -27,7 +27,7 @@ def filter_payments(json_response: list):
     non_returns = []
 
     for value in json_response:
-        if time.time() - value.get("created") > 16200 and value.get("status") == "requires_capture":
+        if time.time() - value.get("created") > 16200 and value.get("status") == "requires_capture" and value.get("amount_capturable") != 5000:
             non_returns.append(value.get("id"))
         else:
             print(f"No value to increment, {value.get('id')}")
@@ -69,6 +69,7 @@ def main():
 
     one_day_ago = int(
             (datetime.now(timezone.utc) - timedelta(days=1)).timestamp())
+    
     key = os.getenv("PROD_KEY")
     headers = {
          "Authorization": f"Bearer {key}"
