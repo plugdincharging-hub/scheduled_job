@@ -79,7 +79,10 @@ def main():
 
     non_returns = fetch_payments(headers, one_day_ago)
 
-    increment_payment(non_returns, headers)
+    if non_returns:
+        increment_payment(non_returns, headers)
+    else:
+        print("Nothing to do.")
 
 if __name__ == "__main__":
     main()
