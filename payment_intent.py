@@ -63,9 +63,9 @@ def main():
         (uk_now.weekday() == 0 and uk_now.time() <= dt_time(2, 0))
     )
 
-    if not allowed:
-        print("Outside of time range, exiting")
-        exit()
+    #if not allowed:
+        #print("Outside of time range, exiting")
+        #exit()
 
     one_day_ago = int(
             (datetime.now(timezone.utc) - timedelta(days=1)).timestamp())
